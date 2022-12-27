@@ -12,4 +12,12 @@ function fizzBuzz(n) {
     return fizzBuzzArray;
 };
 
-console.log(fizzBuzz(30));
+// console.log(fizzBuzz(30));
+
+function middleNode(head) {
+    if (head.length >= 1 && head.length <= 100 ) {
+        return head.slice(Math.floor(head.length / 2)) 
+    }
+};
+
+console.log(middleNode([1, 2, 3, 4, 5, 6, 7, 8, 9]));
