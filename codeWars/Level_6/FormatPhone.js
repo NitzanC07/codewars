@@ -1,9 +1,8 @@
 function formatNumber(number, template) {
     let counter = 0;
-    for (let c = 0; c < template.length; c++) {
-        template[c] === "#" ? counter += 1 : ""
-    }
-
+    template.split('').forEach((c) => {
+        c === "#" ? counter += 1 : ""
+    })
     const len = (String(number)).length;
     if (len >= counter) {
         let phoneNumber = "";
