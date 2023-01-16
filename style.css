@@ -1,3 +1,28 @@
+.page {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.exercise-box {
+    width: 70%;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: rgb(223, 255, 247);
+    border: 2px solid rgb(1, 197, 148);
+    border-radius: 7px;
+}
 h1 {
-    color: blue;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    line-height: 30px;
+    color: rgb(2, 123, 204);
+}
+.my-number {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(0, 55, 92);
 }

@@ -21,9 +21,6 @@ function formatNumber(number, template) {
     }
 }
 
-const result = formatNumber(9720747271127, "+### (###) ### ####")
-console.log(result);
-
 const formNumber = document.querySelector('.form-number');
 const inputNumber = document.querySelector('.input-number');
 const submitButton = document.querySelector('.submit-button');
@@ -31,5 +28,7 @@ const myNumber = document.querySelector('.my-number');
 
 submitButton.addEventListener('click', (e) => {
     e.preventDefault()
-    myNumber.textContent = formatNumber(inputNumber.value, "+### (###) ### ####")
+    const result = formatNumber(inputNumber.value, "+### (###) ### ####")
+    console.log(`${inputNumber.value} >> ${result}`);
+    myNumber.textContent = result;
 })
