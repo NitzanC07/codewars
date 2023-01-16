@@ -12,18 +12,19 @@
 
 function peopleOnBus(busStops) {
     let passngers = 0;
-    busStops.forEach(station => {
-        passngers += station[0] - station[1]
-    })
-    if (passngers < 0) {
-        return "Invalid input";
+    for(let station = 0; station < busStops.length ;station++) {
+        passngers += busStops[station][0] - busStops[station][1]
+        if (passngers < 0) {
+            return "Invalid input";
+        }
     }
+    
     return passngers;
 }
 
 const busStops = [[2, 0], [5, 1], [7, 5], [0, 2]] // 6
 const busStops1 = [[15, 0], [12, 4], [4, 4], [2, 17], [0, 5]] // 3
 const busStops2 = [[0, 0]] // 0
-const busStops3 = [[6, 0], [2, 9]] // 'Invalid input'
+const busStops3 = [[6, 0], [2, 9], [3, 2]] // 'Invalid input'
 const result = peopleOnBus(busStops3);
 console.log(result);
