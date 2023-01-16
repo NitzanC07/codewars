@@ -22,8 +22,10 @@ function pickPeaks(arr) {
     return peaksCounter;
 }
 
-const result1 = pickPeaks([1,2,3,3,3,3,2]) // {pos:[2], peaks:[3]}
-const result2 = pickPeaks([1,2,3,6,4,1,2,3,2,1]) // {pos:[3,7], peaks:[6,3]}
-const result3 = pickPeaks([3,2,3,6,4,1,2,3,2,1,2,2,2,1])//  {pos:[3,7,10], peaks:[6,3,2]}
+const result1 = pickPeaks([1,2,3,2]) // {pos:[2], peaks:[3]}
+const result2 = pickPeaks([1,2,2,3,3,3,2]) // {pos:[3], peaks:[3]}
+const result3 = pickPeaks([1,2,3,6,4,1,2,3,2,1]) // {pos:[3,7], peaks:[6,3]}
+const result4 = pickPeaks([3,2,3,6,4,1,2,3,2,1,2,2,2,1])//  {pos:[3,7,10], peaks:[6,3,2]}
+const result5 = pickPeaks([1,2,3,3,3,3,4]) // {pos:[], peaks:[]}
 
-console.log(result3);
+console.log(result1);
