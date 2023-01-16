@@ -18,9 +18,7 @@ function pickPeaks(arr) {
                 peaksCounter.peaks.push(arr[i]);
             }
         }
-
     }
-
     return peaksCounter;
 }
 
