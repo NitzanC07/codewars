@@ -21,6 +21,4 @@ const singleNumber = function (nums) {
   return singleNum[0]
 };
 
-console.log(
-  singleNumber([1, 2, 3, 2, 1])
-);
+console.log(singleNumber([1, 2, 3, 2, 1]));
