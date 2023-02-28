@@ -24,4 +24,13 @@ function longestCommonPrefix(strs) {
     return commonPrefix;
 };
 
-console.log(longestCommonPrefix(["flight", "flow", "flower"]))
+// const words = ["flight", "flow", "flower"]
+const words = ["dog","racecar","car"]
+console.log(longestCommonPrefix(words))
+
+const argumentsFunc = document.querySelector('.arguments-function');
+const result = document.querySelector('.result');
+words.forEach(word => {
+    argumentsFunc.textContent += `${word} `;
+});
+result.textContent += longestCommonPrefix(words);
