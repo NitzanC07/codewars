@@ -12,16 +12,23 @@
  * @param {number} area
  * @return {number[]}
  */
+
 function constructRectangle(area) {
-    const Length = Math.sqrt(area);
-    let Width = 1;
-    if (Length % 1 === 0) {
-        Width = Length
-        return [Length, Width]
+    let width = Math.sqrt(area);
+    let length = width;
+    if (width % 1 === 0) {
+        return [length, width]
     }
-    return [Length, Width]
+    width = Math.floor(width);
+    for (let i; i >= 1; i--) {
+        length = area / i;
+        if ( length%1 === 0) {
+            console.log(length, width);
+        }
+    }
+    return [length, width]
 };
 
-const result = constructRectangle(8)
+const result = constructRectangle(17)
 console.log(result);
 
