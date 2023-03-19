@@ -8,5 +8,5 @@ function getSlope(p1, p2) {
 
 
 
-const answer = getSlope([1, 1], [1, 1])
+const answer = getSlope([104, -196], [-64, 140])
 console.log(answer);

@@ -32,7 +32,6 @@ const binaryToDecimal = (n) => {
     for (let d = n.length - 1; d >= 0 ; d--) {
         nDecimal += n[d]*2**(n.length-1-d);
     }
-    console.log(nDecimal);
     return nDecimal;
 }
 
@@ -45,8 +44,27 @@ function addBinary(a, b) {
     return decimalToBinary(C);
 };
 
-const result = addBinary(
-    "11111000000100001", 
-    "1000011111111111"
-    )//                                                                                      11000000000
-console.log(result);
+// const result = addBinary(
+//     "11111000000100001", 
+//     "1000011111111111"
+//     )
+// const result = decimalToBinary(78)
+// console.log(result);
+
+const decimalToBaseN = (n, b) => {
+    if (b < 2 || b > 10) {
+        return "Base parameter is not valid."
+    }
+    let targetBase = [];
+    let dec = n
+
+    targetBase.push(n === 0 ? "0" : "") 
+
+    while (dec > 0) { 
+        targetBase.splice(0, 0, dec % b)
+        dec = Math.floor(dec / b);
+    }
+    return targetBase.join("");
+}
+
+console.log(decimalToBaseN(11, 3));

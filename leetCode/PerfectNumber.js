@@ -29,10 +29,7 @@ function checkPerfectNumber(num) {
     return summary === num;
 };
 
-// const result = checkPerfectNumber(28);
-// console.log(result);
-
-for (let a = 1; a < 10_000; a++) {
+for (let a = 1; a < 10000; a++) {
     const result = checkPerfectNumber(a);
     if (result) {
         console.log(a);
