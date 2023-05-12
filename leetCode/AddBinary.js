@@ -67,4 +67,4 @@ const decimalToBaseN = (n, b) => {
     return targetBase.join("");
 }
 
-console.log(decimalToBaseN(11, 3));
+console.log(decimalToBaseN(11, 2));
