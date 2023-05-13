@@ -18,23 +18,23 @@
  */
 
 const createCounter = (n) => {
-    return function () {
-        let result = n
-        n++
-        console.log(result);
-        return result;
+    return function (sign) {
+        sign === "+" && n++;
+        sign === "-" && n--;
+        return n;
     };
 };
 
-const counter = createCounter(12);
-counter();
-counter();
-counter();
-console.log(counter);
+const counter = createCounter(0)
 
-/** 
- * const counter = createCounter(10)
- * counter() // 10
- * counter() // 11
- * counter() // 12
- */
+const btnPlus = document.querySelector('.btn-plus')
+const btnMinus = document.querySelector('.btn-minus')
+const countLabel = document.querySelector('.count-label');
+
+btnPlus.addEventListener('click', () => {
+    countLabel.textContent = counter("+");
+})
+
+btnMinus.addEventListener('click', () => {
+    countLabel.textContent = counter("-");
+})
