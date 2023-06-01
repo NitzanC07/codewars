@@ -17,7 +17,7 @@ var twoSum = function(nums, target) {
     return "Not match"    
 };
 
-const result = twoSum([2, 5, 11, 15], 7)
+const result = twoSum([2, 5, 11, 15], 21)
 // const result = twoSum([3, 2, 4], 6)
 // const result = twoSum([0, 4, 3, 5, 3], 6)
 console.log(result);
