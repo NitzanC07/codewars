@@ -31,6 +31,7 @@ const calculation = (n) => {
                     numAndArt.artimetic === "-" ? n - numAndArt.x :
                     numAndArt.artimetic === "*" ? n * numAndArt.x :
                     numAndArt.artimetic === "/" ? Math.floor(n / numAndArt.x) : "";
+    
     return numAndArt;
 } 
 
@@ -52,13 +53,22 @@ function one() {
     return checkFirstOrSecondNumber(1)
 }
 function two() {
-    return checkFirstOrSecondNumber(2)
+    console.log("function two_before: ", numAndArt);
+    const r = checkFirstOrSecondNumber(2);
+    console.log("function two_after: ", numAndArt);
+    return r;
 }
 function three() {
-    return checkFirstOrSecondNumber(3)
+    console.log("function three_before: ", numAndArt);
+    const r = checkFirstOrSecondNumber(3);
+    console.log("function three_after: ", numAndArt);
+    return r;
 }
 function four() {
-    return checkFirstOrSecondNumber(4)
+    console.log("function four_before: ", numAndArt);
+    const r = checkFirstOrSecondNumber(4);
+    console.log("function four_after: ", numAndArt);
+    return r;
 }
 function five() {
     return checkFirstOrSecondNumber(5)
@@ -85,7 +95,7 @@ function minus() {
     return numAndArt;
 }
 function times() {
-    numAndArt.artimetic = "*"
+    numAndArt.artimetic = "*";
     return numAndArt;
 }
 function dividedBy() {
@@ -93,5 +103,5 @@ function dividedBy() {
     return numAndArt;
 }
 
-const result = five(plus(four(numAndArt)));
+const result = zero(minus(four(numAndArt)));
 console.log("END", result);
