@@ -44,7 +44,7 @@ function isDivisibleBy6(s) {
     
     return results;
 }
-const result = isDivisibleBy6(`2*10`);
-const result2 = isDivisibleBy6(`${10**14}*0`);
+const result = isDivisibleBy6("731*54");
+// const result2 = isDivisibleBy6(`${10**14}*0`);
 
 console.log(result);
