@@ -5,6 +5,8 @@
  * "Tombola" is an Italian raffle/bingo-like game, mostly played during Christmas holidays; 
  * you have a sheet with 15 numbers and win increasing prizes while you complete it. Wikipedia link.
  * 
+ * Tombola game in Wikipedia: https://en.wikipedia.org/wiki/Tombola_(game)
+ * 
  * **SHEET SAMPLE**
  * https://www.codewars.com/kata/5898a751b2edc082f60005f4
  * 
@@ -21,7 +23,40 @@
  * To make the kata more challenging, I will not tell you why the input sheet is not valid.
  */
 
-function check_tombola(arr){
+function check_tombola(tombolaBoard){
+    let uniqueNumbers = [];
+    let totalRowNumbers = [];
+    let totalColumnsNumbers = [];
     
+    if (tombolaBoard.length !== 3) {
+        return [false, "Tambola board hasn't 3 rows."]
+    }
+    for (let row = 0; row < tombolaBoard.length; row++) {
+        if (tombolaBoard[row].length !== 9) {
+            return [false, "Tambola board hasn't 9 columns."]
+        };
+
+    } 
+        
     return true;
 }
+
+tombolaBoard1 = [
+    [0, 16, 0, 37, 0, 54, 0, 75, 81],
+    [1, 0, 28, 0, 41, 59, 0, 0, 84],
+    [0, 19, 29, 0, 45, 0, 65, 0, 89]
+];
+
+tombolaBoard2 = [
+    [0, 0, 0, 35, 0, 55, 60, 72, 86],
+    [3, 0, 22, 0, 40, 58, 0, 79, 0],
+    [7, 0, 25, 0, 41, 0, 65, 0, 88]
+];
+
+tombolaBoard3 = [
+    [0, 11, 0, 0, 41, 0, 65, 70, 0],
+    [0, 16, 24, 32, 48, 0, 67, 0, 90],
+    [1, 0, 27, 33, 0, 59, 0, 74, 0]
+];
+
+console.log(check_tombola(tombolaBoard1));

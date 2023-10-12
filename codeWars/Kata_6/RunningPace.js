@@ -13,8 +13,8 @@
  * You don't have to convert these into hours. Floor the number of seconds.
  */
 
-const TIME = "8:30"
-const KM = 2
+const TIME = "0:17"
+const KM = 0.1
 
 // Level 1
 // Calculate the running's pace in minutes per kilometer.
@@ -22,12 +22,12 @@ function runningPace(distance, time){
     const timeSeconds = Number(time.split(":")[0])*60 + Number(time.split(":")[1])
     const paceSeconds = timeSeconds / distance;
     const paceMins = `${Math.floor(paceSeconds / 60)}`.padStart(2, '0');
-    const paceSecs = `${Math.floor(paceSeconds % 60)}`.padStart(2, '0');
+    const paceSecs = `${(paceSeconds % 60)}`;
     return `${paceMins}:${paceSecs}`
 }
 
 const pace = runningPace(KM, TIME);
-console.log(`Pace: ${pace}`);
+console.log(`Pace: ${pace} min/km`);
 
 // Calculate the running's speed in kilometer per hour.
 function runningSpeed(distance, time) {
@@ -38,24 +38,24 @@ function runningSpeed(distance, time) {
 }
 
 const speed = runningSpeed(KM, TIME);
-console.log(`Speed: ${speed}`);
+console.log(`Speed: ${speed} km/h`);
 
 // Level 2 - Convert pace in minutes per kilometer to speed in kilometers per hour.
 function convertPaceToSpeed(pace) {
     return runningSpeed(1, pace);
 }
 
-const s = convertPaceToSpeed(pace);
+const s = convertPaceToSpeed("6:30");
 console.log(s);
 
 // Level 3 - Convert speed in kilometers per hour to pace in minutes per kilometer.
 function convertSpeedToPace(speed) {
     const minutesPerKilometer = 60 / speed;
     const paceMins = `${Math.floor(minutesPerKilometer)}`.padStart(2, '0');
-    const paceSecs = `${Math.floor((minutesPerKilometer-paceMins)*60)}`.padStart(2, '0');    
+    const paceSecs = `${(minutesPerKilometer-paceMins)*60}`;
 
     return `${paceMins}:${paceSecs}`;
 }
 
-const p = convertSpeedToPace(speed)
+const p = convertSpeedToPace(15.2)
 console.log(p);
