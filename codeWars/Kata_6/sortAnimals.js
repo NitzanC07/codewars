@@ -28,8 +28,9 @@ const animals = [
 ];
 
 function sortAnimal(animals) {
+    let sortedAnimals = animals.slice();
 
-    let sortedAnimals = animals.sort(
+    sortedAnimals = animals.sort(
         (a1, a2) => 
             (a1.numberOfLegs < a2.numberOfLegs) ? -1 : (a1.numberOfLegs > a2.numberOfLegs) ? 1 : 
             (a1.name < a2.name) ? -1 : (a1.name > a2.name) ? 1 : 0);
