@@ -47,20 +47,20 @@ function maxProfit02(prices) {
     
     for (let i = 0; i < prices.length; i++) {
         let currentProfit = prices[i+1] - prices[i];
-        if(currentProfit > 0) {
-            if (buyPrice < prices[i]) {
-                profit = prices[i+1] - buyPrice
-            } else {
-                profit = currentProfit;
+        if (currentProfit > 0) {
+            if (prices[i] < buyPrice) {
+                buyPrice = prices[i]
             }
-        }
-        if (prices[i] < buyPrice) {
-            buyPrice = prices[i]
-            profit = prices[i+1] - buyPrice;
+            if (prices[i+1] - buyPrice > profit) {
+                profit = prices[i+1] - buyPrice
+            }
         }
     }
     return profit;
-}
+    }
 
-const result = maxProfit02([7, 1, 5, 3, 6, 4])
+
+// const result = maxProfit02([7, 1, 5, 3, 6, 4])
+// const result = maxProfit02([7, 6, 5, 4, 2, 1])
+const result = maxProfit02([3, 2, 4, 8, 1, 6]);
 console.log(result);
