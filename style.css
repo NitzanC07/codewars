@@ -78,3 +78,9 @@ h1 {
     border: 0;
     background-color: antiquewhite;    
 }
+
+.btn-reset {
+    width: 80px;
+    margin: 0 10px;
+    background-color: aquamarine;
+}

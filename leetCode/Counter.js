@@ -18,23 +18,32 @@
  */
 
 const createCounter = (n) => {
-    return function (sign) {
-        sign === "+" && n++;
-        sign === "-" && n--;
-        return n;
+    const init = n;
+    
+    return function counter () {
+        return {
+            increment: () => ++n,
+            decrement: () => --n,
+            reset: () => n = init
+        };
     };
 };
 
-const counter = createCounter(0)
+const counter = createCounter(10)
 
 const btnPlus = document.querySelector('.btn-plus')
 const btnMinus = document.querySelector('.btn-minus')
+const btnReset = document.querySelector('.btn-reset')
 const countLabel = document.querySelector('.count-label');
 
 btnPlus.addEventListener('click', () => {
-    countLabel.textContent = counter("+");
+    countLabel.textContent = counter().increment();
 })
 
 btnMinus.addEventListener('click', () => {
-    countLabel.textContent = counter("-");
+    countLabel.textContent = counter().decrement();
+})
+
+btnReset.addEventListener('click', () => {
+    countLabel.textContent = counter().reset();
 })
