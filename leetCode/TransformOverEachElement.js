@@ -22,3 +22,22 @@ function plusOne(x, i) {
 
 const result = map([1, 2, 3], plusOne)
 console.log(result);
+
+const filter = function(arr, fn) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (fn(arr[i])) {
+            newArr = [...newArr, fn(arr[i], i)]
+        };
+    }
+    return newArr;
+}
+
+const greaterThan10 = (a) => {
+    if (a > 10) {
+        return a;
+    }
+}
+
+const res = filter([0, 10, 20, 30], greaterThan10)
+console.log(res);
