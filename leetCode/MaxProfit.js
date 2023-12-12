@@ -59,6 +59,10 @@ function maxProfit02(prices) {
     return profit;
     }
 
+    const maxProfit03 = (prices) => {
+        return prices[0]
+    }
+
 
 // const result = maxProfit02([7, 1, 5, 3, 6, 4])
 // const result = maxProfit02([7, 6, 5, 4, 2, 1])
