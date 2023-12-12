@@ -59,7 +59,7 @@ function maxProfit02(prices) {
     return profit;
     }
 
-    const maxProfit03 = (prices) => {
+    const maxProfit04 = (prices) => {
         return prices[0]
     }
 
