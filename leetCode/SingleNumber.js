@@ -13,6 +13,7 @@ const singleNumber = function (nums) {
   let singleNum = [nums[0]];
   for (let i = 1; i < nums.length; i++) {
     if (!singleNum.includes(nums[i])) {
+      console.log(singleNum);
       singleNum = [...singleNum, nums[i] ]
     } else {
       singleNum = singleNum.filter(n => n !== nums[i])
